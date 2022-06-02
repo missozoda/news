@@ -1,5 +1,5 @@
 // API ni o'zgaruvchiga yuklab olish
-let FetchApi = "https://newsapi.org/v2/everything?q=apple&sortBy=relevancy&apiKey=23b7a8c33c5841c8acaaca94327ff30f";
+let FetchApi = "http://newsapi.org/v2/everything?q=apple&sortBy=relevancy&apiKey=23b7a8c33c5841c8acaaca94327ff30f";
 
 // Form elementlarini chaqirib olish
 let elForm = $(".form")
@@ -72,6 +72,6 @@ let renderNews = (news) => {
   news.forEach ((onlyNew) => {
     elResultFragment.appendChild(createNewsItem(onlyNew));
   })
-  
+
   elResultList.appendChild(elResultFragment);
 }
