@@ -1,5 +1,5 @@
 // API ni o'zgaruvchiga yuklab olish
-let FetchApi = "https://newsapi.org/v2/everything?q=apple&sortBy=relevancy&apiKey=23b7a8c33c5841c8acaaca94327ff30f";
+let FetchApi = "https://newsapi.org/v2/everything?apiKey=23b7a8c33c5841c8acaaca94327ff30f&q=apple&sortBy=relevancy";
 
 // Form elementlarini chaqirib olish
 let elForm = $(".form")
