@@ -16,6 +16,7 @@ let elModalTemplate = $("#modal-template").content;
 // Apini fetch qilish
 let callFetchApi = function(api){
   fetch(api).then(function(response){
+    console.log(response);
     return response.json();
   }).then(function(data){
     console.log(data.articles);
