@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsAPI</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+<body class="bg-secondary p-4">
+  <div class="container bg-light rounded-3">
+    <header class="site-header p-3">
+      <h2 class="heading fs-1 fw-bold text-center">NewsAPI</h2>
+    </header>
+
+    <section class="form-section m-3">
+      <form class="form d-flex justify-content-between align-items-center" action="https://echo.htmlacademy.ru" method="get">
+        <input class="search-input form-control w-50 me-5" type="search" name="search" id="search" placeholder="Search" autocomplete="off" autofocus>
+        <select class="sort-by-select form-select form-select-lg w-25 ms-5 text-secondary fw-bold" name="sort-by" id="sort-by">
+          <option value="relevancy" selected>Relevancy</option>
+          <option value="popularity">Popularity</option>
+          <option value="publishedAt">PublishedAt</option>
+        </select>
+        <button class="submit-btn form-label btn btn-outline-secondary fs-5" type="submit">Search</button>
+      </form>
+    </section>
+    <section class="hero-section p-3">
+      <ul class="hero-result-list m-0 p-0 list-unstyled"></ul>
+    </section>
+  </div>
+
+  <template id="template">
+    <li class="card mb-3 template-item rounded-3 position-relative w-100">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://media.wired.com/photos/628c07822563a9a2cb377a0b/191:100/w_1280,c_limit/surveillance_science-GettyImages-536214958.jpg"  class="img-fluid rounded-start news-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title title">Card title</h5>
+            <p class="card-text content">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="card-box d-flex justify-content-between align-items-center mb-5">
+              <a class="card-link source text-decoration-none" href="http://" target="_blank">Souce >> </a>
+              <button type="button" class="btn btn-out btn-outline-secondary d-block fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">More...</button>
+            </div>
+            <p class="card-text position-absolute bottom-0 end-0 m-3">
+              <span class="text-muted author d-block"></span>
+              <small class="text-muted date d-block text-end">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </template>
+
+  <template id="modal-template">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="content"></p>
+            <p class="description"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
